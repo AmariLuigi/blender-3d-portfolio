@@ -1,0 +1,32 @@
+# Blender Auto-Saves and Backup Files
+*.blend1
+*.blend2
+*.blend@
+*.blend[0-9]
+*.autosave.blend
+
+# Raw working video renders in root (Portfolio uses optimized assets in assets/videos/)
+/*_4K_*.mp4
+/Cinematic_Wave_*.mp4
+/Dodge_Challenger_*.mp4
+/jellyfish_*.mp4
+
+# Draft test assets
+jellyfish*
+*jellyfish*
+Dodge_Challenger*
+Cinematic_Car_Studio_Stage*
+bugatti.blend
+
+# Python / Environment Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.vscode/
+.idea/
+*.log
+
+# OS-specific Files
+.DS_Store
+Thumbs.db
+desktop.ini
