@@ -26,6 +26,7 @@ bugatti.blend
 __pycache__/
 *.py[cod]
 *$py.class
+render_*.py
 .vscode/
 .idea/
 *.log
