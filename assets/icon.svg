@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="iconTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff4db"/>
+      <stop offset="100%" stop-color="#e5c07b"/>
+    </linearGradient>
+    <linearGradient id="iconLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#9a7b1c"/>
+    </linearGradient>
+    <linearGradient id="iconRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b89329"/>
+      <stop offset="100%" stop-color="#5a4409"/>
+    </linearGradient>
+    <linearGradient id="iconCore" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#e5c07b" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Pill Rounded Square -->
+  <rect width="64" height="64" rx="16" fill="#0f1118"/>
+  <rect x="0.5" y="0.5" width="63" height="63" rx="15.5" stroke="rgba(255,255,255,0.12)"/>
+
+  <!-- 3D Isometric Crystal Cube -->
+  <g transform="translate(6, 6)">
+    <!-- Top Face -->
+    <polygon points="26,6 48,18 26,30 4,18" fill="url(#iconTop)"/>
+    <!-- Left Face -->
+    <polygon points="4,18 26,30 26,52 4,40" fill="url(#iconLeft)"/>
+    <!-- Right Face -->
+    <polygon points="26,30 48,18 48,40 26,52" fill="url(#iconRight)"/>
+    <!-- Core Floating Gem -->
+    <polygon points="26,14 36,20 26,26 16,20" fill="url(#iconCore)"/>
+    <!-- Inner Polished Highlights -->
+    <polyline points="4,18 26,30 48,18" stroke="#ffffff" stroke-width="1.2" stroke-opacity="0.7"/>
+    <line x1="26" y1="30" x2="26" y2="52" stroke="#ffffff" stroke-width="1.2" stroke-opacity="0.5"/>
+  </g>
+</svg>
