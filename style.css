@@ -138,9 +138,9 @@ body {
   transition: var(--transition-fast);
 }
 .brand-logo-img {
-  height: 40px;
+  height: 38px;
   width: auto;
-  max-width: 220px;
+  max-width: 260px;
   display: block;
   object-fit: contain;
   transition: var(--transition-fast);
