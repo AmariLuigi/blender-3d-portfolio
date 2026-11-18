@@ -1,23 +1,50 @@
 /**
- * 3D Motion & Kinetic Art Portfolio - Interactive Experience Engine
- * Pure vanilla JavaScript with zero external dependencies.
+ * LUIGI AMARI — 3D ARTIST & MOTION DESIGNER
+ * Interactive Portfolio Experience Engine
  */
 
-// Embedded metadata ensures seamless operation on both local file:// and GitHub Pages https://
 const PORTFOLIO_DATA = [
+  {
+    id: "dodge_challenger",
+    title: "1970 Dodge Challenger R/T",
+    subtitle: "Studio Cinematic Showcase",
+    category: "automotive",
+    category_name: "Automotive & Studio",
+    badge_color: "pill-gold",
+    year: "2026",
+    role: "Studio Lighting, Lookdev & Camera Direction",
+    desc: "Photorealistic 4K studio cinematic showcase of the iconic 1970 Dodge Challenger R/T. Engineered with custom softbox cyclorama lighting, realistic automotive paint clearcoat reflections, and smooth sweeping camera choreography.",
+    poster: "assets/posters/dodge_challenger_4k.jpg",
+    video_1080p: "assets/videos/dodge_challenger_1080p.mp4",
+    video_4k: "assets/videos/dodge_challenger_4k.mp4",
+    tech: {
+      artist: "Luigi Amari",
+      resolution: "4K UHD (3840×2160)",
+      fps: "30 FPS",
+      frames: "300 Frames",
+      duration: "10.0s",
+      engine: "Blender Cycles (OptiX)",
+      lighting: "Overhead softbox cyclorama + edge rim striplights",
+      optix: "RGB + Albedo + Normal Denoised",
+      color_space: "AgX High Contrast"
+    },
+    highlights: ["Automotive Clearcoat Shader", "Studio Cyclorama Rig", "Smooth Orbital Cam", "Zero-Grain Denoising"]
+  },
   {
     id: "art_nouveau_motion1",
     title: "Art Nouveau Kinetic Sphere — Motion I",
     subtitle: "The Golden Follow Glide",
     category: "art-nouveau",
-    category_name: "Art Nouveau Kinetics",
+    category_name: "Kinetic Sculptures",
     badge_color: "pill-gold",
-    accent: "#f5b041",
-    desc: "Intricate Art Nouveau kinetic sphere gliding smoothly over a dynamic gold-filigree procedural surface. Features organic curved lattice geometry, reflective metallic luster, and fluid camera choreography.",
+    year: "2026",
+    role: "Direction, Procedural Shading & 3D Animation",
+    desc: "An exploration of organic Art Nouveau filigree translated into physical kinetic motion. Gold-leaf lattice geometry gliding smoothly across an undulating procedural plane with warm multi-bounce reflections.",
     poster: "assets/posters/art_nouveau_motion1.jpg",
     video_1080p: "assets/videos/art_nouveau_motion1_1080p.mp4",
     video_4k: "assets/videos/art_nouveau_motion1_4k.mp4",
     tech: {
+      artist: "Luigi Amari",
       resolution: "4K UHD (3840×2160)",
       fps: "30 FPS",
       frames: "300 Frames",
@@ -34,14 +61,16 @@ const PORTFOLIO_DATA = [
     title: "Art Nouveau Kinetic Sphere — Motion II",
     subtitle: "The Grand 180° Panoramic Orbit",
     category: "art-nouveau",
-    category_name: "Art Nouveau Kinetics",
+    category_name: "Kinetic Sculptures",
     badge_color: "pill-gold",
-    accent: "#f5b041",
-    desc: "A sweeping 180-degree panoramic orbit around the Art Nouveau kinetic sphere, transitioning seamlessly from a low-angle front profile to an elevated architectural overview across the entire wave.",
+    year: "2026",
+    role: "Camera Choreography & Lighting Direction",
+    desc: "A continuous 180-degree panoramic orbit around the Art Nouveau kinetic sphere, seamlessly transitioning from a low-angle front profile to an elevated architectural vantage across the wave.",
     poster: "assets/posters/art_nouveau_motion2.jpg",
     video_1080p: "assets/videos/art_nouveau_motion2_1080p.mp4",
     video_4k: "assets/videos/art_nouveau_motion2_4k.mp4",
     tech: {
+      artist: "Luigi Amari",
       resolution: "4K UHD (3840×2160)",
       fps: "30 FPS",
       frames: "300 Frames",
@@ -58,14 +87,16 @@ const PORTFOLIO_DATA = [
     title: "Liquid Chrome Morphing Sphere — Motion I",
     subtitle: "The Kinetic Follow Glide",
     category: "fluid-metal",
-    category_name: "Liquid Chrome & Fluid",
-    badge_color: "pill-cyan",
-    accent: "#38bdf8",
-    desc: "Viscous liquid mercury sphere with hyper-reflective chrome surface gliding along an undulating fluid topology. Low-angle tracking shot with realistic motion blur and studio cyclorama reflections.",
+    category_name: "Fluid & Chrome",
+    badge_color: "pill-silver",
+    year: "2026",
+    role: "Fluid Mechanics & Material Study",
+    desc: "Viscous mercury chrome sphere gliding along an undulating fluid topology. Focuses on realistic surface tension, forward motion blur, and crisp cyclorama specular reflections.",
     poster: "assets/posters/liquid_chrome_motion1.jpg",
     video_1080p: "assets/videos/liquid_chrome_motion1_1080p.mp4",
     video_4k: "assets/videos/liquid_chrome_motion1_4k.mp4",
     tech: {
+      artist: "Luigi Amari",
       resolution: "4K UHD (3840×2160)",
       fps: "30 FPS",
       frames: "300 Frames",
@@ -80,16 +111,18 @@ const PORTFOLIO_DATA = [
   {
     id: "liquid_chrome_motion2",
     title: "Liquid Chrome Morphing Sphere — Motion II",
-    subtitle: "The Grand 180° Orbital Glide",
+    subtitle: "The Grand 180° Orbital Sweep",
     category: "fluid-metal",
-    category_name: "Liquid Chrome & Fluid",
-    badge_color: "pill-cyan",
-    accent: "#38bdf8",
-    desc: "Elevated 180-degree orbital sweep capturing the liquid chrome geometry against a deep obsidian studio backdrop, accentuating pure metallic deformation and dynamic caustic reflections.",
+    category_name: "Fluid & Chrome",
+    badge_color: "pill-silver",
+    year: "2026",
+    role: "Camera Choreography & Lighting",
+    desc: "Elevated 180-degree orbital sweep capturing liquid chrome deformation against an obsidian studio backdrop, accentuating pure metallic reflectivity and caustic highlights.",
     poster: "assets/posters/liquid_chrome_motion2.jpg",
     video_1080p: "assets/videos/liquid_chrome_motion2_1080p.mp4",
     video_4k: "assets/videos/liquid_chrome_motion2_4k.mp4",
     tech: {
+      artist: "Luigi Amari",
       resolution: "4K UHD (3840×2160)",
       fps: "30 FPS",
       frames: "300 Frames",
@@ -103,17 +136,19 @@ const PORTFOLIO_DATA = [
   },
   {
     id: "cyberpunk_neon_orbital",
-    title: "Cyberpunk Neon Kinetic Sphere",
-    subtitle: "Orbital Core Simulation",
+    title: "Cyberpunk Kinetic Core",
+    subtitle: "Orbital Energy Simulation",
     category: "cyberpunk",
-    category_name: "Cyberpunk & Sci-Fi",
-    badge_color: "pill-cyan",
-    accent: "#00f0ff",
-    desc: "Futuristic energy sphere with pulsating emissive core and cybernetic rings navigating a neon-lit cyber grid. High-energy volumetric lighting with chromatic synthwave accents.",
+    category_name: "Sci-Fi Kinetics",
+    badge_color: "pill-blue",
+    year: "2026",
+    role: "Direction & Volumetric Lighting",
+    desc: "Pulsating energy core with concentric cybernetic rings floating in an infinite void. Features volumetric atmospheric fog, cyan and magenta emission falloff, and smooth orbital camera pacing.",
     poster: "assets/posters/cyberpunk_neon_orbital.jpg",
     video_1080p: "assets/videos/cyberpunk_neon_orbital_1080p.mp4",
     video_4k: "assets/videos/cyberpunk_neon_orbital_4k.mp4",
     tech: {
+      artist: "Luigi Amari",
       resolution: "4K UHD (3840×2160)",
       fps: "30 FPS",
       frames: "298 Frames",
@@ -127,17 +162,19 @@ const PORTFOLIO_DATA = [
   },
   {
     id: "cyberpunk_neon_trailing",
-    title: "Cyberpunk Neon Core — Trailing Cam",
+    title: "Cyberpunk Core — Trailing Cam",
     subtitle: "Dynamic Chase & Zoom Out",
     category: "cyberpunk",
-    category_name: "Cyberpunk & Sci-Fi",
-    badge_color: "pill-cyan",
-    accent: "#c084fc",
-    desc: "High-speed chase camera perspective tracking the cyberpunk kinetic orb from behind, dynamically zooming out to reveal the full scope of neon cybernetic geometry in infinite void.",
+    category_name: "Sci-Fi Kinetics",
+    badge_color: "pill-blue",
+    year: "2026",
+    role: "Motion Choreography & Focal Zoom",
+    desc: "High-speed chase camera perspective tracking the kinetic orb from behind, progressively pulling out to reveal the full scope of neon cybernetic geometry in space.",
     poster: "assets/posters/cyberpunk_neon_trailing.jpg",
     video_1080p: "assets/videos/cyberpunk_neon_trailing_1080p.mp4",
     video_4k: "assets/videos/cyberpunk_neon_trailing_4k.mp4",
     tech: {
+      artist: "Luigi Amari",
       resolution: "4K UHD (3840×2160)",
       fps: "30 FPS",
       frames: "300 Frames",
@@ -151,17 +188,19 @@ const PORTFOLIO_DATA = [
   },
   {
     id: "cinematic_wave",
-    title: "Cinematic Ocean Wave Surge",
-    subtitle: "Procedural 4K Fluid Simulation",
+    title: "Ocean Surge Simulation",
+    subtitle: "Procedural Fluid Study",
     category: "ocean-wave",
-    category_name: "Procedural Simulation",
+    category_name: "Ocean Dynamics",
     badge_color: "pill-gold",
-    accent: "#f59e0b",
-    desc: "Atmospheric procedural ocean wave surge with deep subsurface scattering, micro-foam displacement, and cinematic sunlight diffusion cutting through turbulent crests.",
+    year: "2026",
+    role: "Procedural Simulation & Water Physics",
+    desc: "Atmospheric procedural ocean surge featuring deep subsurface water scattering, micro-foam displacement, and low-sun golden hour diffusion cutting through turbulent crests.",
     poster: "assets/posters/cinematic_wave.jpg",
     video_1080p: "assets/videos/cinematic_wave_1080p.mp4",
     video_4k: "assets/videos/cinematic_wave_4k.mp4",
     tech: {
+      artist: "Luigi Amari",
       resolution: "4K UHD (3840×2160)",
       fps: "24 FPS",
       frames: "108 Frames",
@@ -180,7 +219,7 @@ class PortfolioApp {
     this.items = PORTFOLIO_DATA;
     this.currentFilter = "all";
     this.currentModalIndex = 0;
-    this.currentQuality = "1080p"; // '1080p' or '4k'
+    this.currentQuality = "1080p";
     
     // Elements
     this.galleryGrid = document.getElementById("galleryGrid");
@@ -221,7 +260,7 @@ class PortfolioApp {
       ? this.items
       : this.items.filter(item => item.category === this.currentFilter);
 
-    filtered.forEach((item, index) => {
+    filtered.forEach((item) => {
       const card = document.createElement("div");
       card.className = "video-card";
       card.dataset.id = item.id;
@@ -236,7 +275,7 @@ class PortfolioApp {
           </video>
           
           <div class="card-badge-top-left">
-            <span class="pill-badge ${item.badge_color}">${item.category_name}</span>
+            <span class="pill-badge">${item.category_name}</span>
           </div>
           <div class="card-badge-top-right">
             <span class="pill-badge">${item.tech.resolution}</span>
@@ -246,16 +285,19 @@ class PortfolioApp {
           </div>
 
           <div class="play-overlay">
-            <div class="play-circle" title="Open Cinema Theater">
+            <div class="play-circle" title="View in Cinema Theater">
               <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             </div>
           </div>
         </div>
 
         <div class="card-body">
-          <div class="card-category-tag">${item.category_name}</div>
+          <div class="card-header-row">
+            <span class="card-category-tag">${item.category_name}</span>
+            <span class="card-year">${item.year}</span>
+          </div>
           <h3 class="card-title">${item.title}</h3>
-          <div class="card-subtitle">${item.subtitle}</div>
+          <div class="card-subtitle">${item.subtitle} • ${item.role}</div>
           <p class="card-description">${item.desc}</p>
 
           <div class="card-tech-tags">
@@ -264,13 +306,13 @@ class PortfolioApp {
 
           <div class="card-actions">
             <button class="btn-cinema-open" data-index="${globalIndex}">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
               </svg>
-              Cinema Mode
+              View Artwork
             </button>
             <button class="btn-preview-toggle" data-index="${globalIndex}">
-              Preview 1080p
+              Hover to preview
             </button>
           </div>
         </div>
@@ -303,7 +345,7 @@ class PortfolioApp {
         video.pause();
       });
 
-      // Click on media box opens modal
+      // Click on media opens modal
       media.addEventListener("click", () => {
         const index = parseInt(media.dataset.index, 10);
         this.openTheaterModal(index);
@@ -318,18 +360,18 @@ class PortfolioApp {
         });
       }
 
-      // Preview button toggle
+      // Preview toggle button
       const previewBtn = card.querySelector(".btn-preview-toggle");
       if (previewBtn) {
         previewBtn.addEventListener("click", () => {
           if (media.classList.contains("is-playing")) {
             media.classList.remove("is-playing");
             video.pause();
-            previewBtn.textContent = "Preview 1080p";
+            previewBtn.textContent = "Hover to preview";
           } else {
             media.classList.add("is-playing");
             video.play().catch(() => {});
-            previewBtn.textContent = "Pause Preview";
+            previewBtn.textContent = "Pause preview";
           }
         });
       }
@@ -393,7 +435,7 @@ class PortfolioApp {
     this.theaterFullscreenBtn.addEventListener("click", () => this.toggleTheaterFullscreen());
     this.theaterLoopBtn.addEventListener("click", () => {
       this.theaterVideo.loop = !this.theaterVideo.loop;
-      this.theaterLoopBtn.style.color = this.theaterVideo.loop ? "var(--accent-cyan)" : "#fff";
+      this.theaterLoopBtn.style.color = this.theaterVideo.loop ? "#ffffff" : "var(--text-muted)";
     });
 
     // Video Events for Timeline
@@ -465,14 +507,14 @@ class PortfolioApp {
     this.theaterVideo.src = src;
     this.theaterVideo.poster = item.poster;
     this.theaterVideo.loop = true;
-    this.theaterLoopBtn.style.color = "var(--accent-cyan)";
+    this.theaterLoopBtn.style.color = "#ffffff";
     
     // Update Quality badge
     this.updateQualityBadge();
 
     // Populate metadata drawer
     document.getElementById("modalTitle").textContent = item.title;
-    document.getElementById("modalSubtitle").textContent = item.subtitle;
+    document.getElementById("modalSubtitle").textContent = `${item.subtitle} • ${item.role}`;
     document.getElementById("modalDescription").textContent = item.desc;
     document.getElementById("specResolution").textContent = item.tech.resolution;
     document.getElementById("specFps").textContent = item.tech.fps;
@@ -554,13 +596,9 @@ class PortfolioApp {
 
   updateQualityBadge() {
     if (this.currentQuality === "4k") {
-      this.qualityToggleBtn.innerHTML = `💎 4K UHD Master`;
-      this.qualityToggleBtn.style.borderColor = "var(--accent-gold)";
-      this.qualityToggleBtn.style.color = "var(--accent-gold)";
+      this.qualityToggleBtn.innerHTML = `4K Master`;
     } else {
-      this.qualityToggleBtn.innerHTML = `⚡ 1080p Fast Stream`;
-      this.qualityToggleBtn.style.borderColor = "var(--accent-cyan)";
-      this.qualityToggleBtn.style.color = "var(--accent-cyan)";
+      this.qualityToggleBtn.innerHTML = `1080p Stream`;
     }
   }
 
@@ -594,7 +632,6 @@ class PortfolioApp {
   }
 }
 
-// Instantiate on DOM ready
 document.addEventListener("DOMContentLoaded", () => {
   window.portfolioApp = new PortfolioApp();
 });
