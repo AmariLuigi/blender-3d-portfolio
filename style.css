@@ -363,6 +363,16 @@ body {
   color: var(--accent-gold);
   border-color: var(--border-gold);
 }
+.pill-red {
+  color: #ff5555;
+  border-color: rgba(255, 85, 85, 0.45);
+  background: rgba(255, 30, 30, 0.12);
+}
+.pill-purple {
+  color: #c084fc;
+  border-color: rgba(192, 132, 252, 0.4);
+  background: rgba(168, 85, 247, 0.12);
+}
 .featured-sound-toggle {
   pointer-events: auto;
   width: 38px;
@@ -983,6 +993,20 @@ body {
   align-items: center;
   justify-content: center;
 }
+.theater-iframe-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 15;
+}
+.theater-iframe-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
 .theater-video {
   width: 100%;
   height: 100%;
@@ -1142,7 +1166,53 @@ body {
   border-top: 1px solid var(--border-subtle);
 }
 .theater-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
   margin-bottom: 14px;
+}
+.modal-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.btn-youtube-external {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ff0000;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(255, 0, 0, 0.35);
+}
+.btn-youtube-external:hover {
+  background: #e60000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.55);
+}
+.btn-youtube-external svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+.btn-card-youtube {
+  color: #ff5555 !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-card-youtube:hover {
+  color: #ffffff !important;
+  border-color: #ff5555 !important;
+  background: rgba(255, 85, 85, 0.15) !important;
 }
 .modal-title-group h2 {
   font-size: 1.4rem;

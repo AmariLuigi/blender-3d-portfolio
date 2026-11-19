@@ -1,9 +1,38 @@
 /**
  * LUIGI AMARI — 3D ARTIST & MOTION DESIGNER
- * Abstract Materials • Geometric Loops • Fluid Simulations • Technology Backgrounds
+ * Abstract Materials • Geometric Loops • Fluid Simulations • Technology Backgrounds • Audio Reactive
  */
 
 const PORTFOLIO_DATA = [
+  {
+    id: "look_to_him",
+    title: "Look to Him — Audio Reactive Blood Moon",
+    subtitle: "Procedural 4K Audio Reactive Visualizer",
+    category: "audio-reactive",
+    category_name: "Audio Reactive",
+    badge_color: "pill-purple",
+    year: "2026",
+    role: "Audio Reactive Simulation & Procedural Shading",
+    desc: "Full-length 4K audio reactive synthwave visualizer rendered in Blender. Features procedural FFT frequency analysis driving real-time water wave displacement, Blood Moon core pulsations, mountain grid wireframe emission shifts, and atmospheric ember bursts synchronized to the music track.",
+    poster: "assets/posters/look_to_him_hq.jpg",
+    video_1080p: "assets/videos/look_to_him_preview_1080p.mp4",
+    video_4k: "https://www.youtube.com/watch?v=ZCQUX0lo0Ss",
+    youtube_id: "ZCQUX0lo0Ss",
+    youtube_url: "https://www.youtube.com/watch?v=ZCQUX0lo0Ss",
+    youtube_embed: "https://www.youtube-nocookie.com/embed/ZCQUX0lo0Ss?autoplay=1&rel=0&modestbranding=1",
+    tech: {
+      artist: "Luigi Amari",
+      resolution: "4K UHD (3840×2160)",
+      fps: "30 FPS",
+      frames: "8,552 Frames",
+      duration: "4m 45s",
+      engine: "Blender 3D",
+      lighting: "Blood Moon volumetric emission + synthwave horizon glow",
+      optix: "Audio Reactive FFT (Sub-Bass, Snare, Highs)",
+      color_space: "AgX High Dynamic Range"
+    },
+    highlights: ["Audio Reactive FFT Engine", "4K YouTube Master", "Dynamic Water Wave Physics", "Wireframe Grid Shifts"]
+  },
   {
     id: "art_nouveau_motion1",
     title: "Art Nouveau Kinetic Sphere — Motion I",
@@ -267,6 +296,8 @@ class PortfolioApp {
       
       const globalIndex = this.items.findIndex(it => it.id === item.id);
 
+      const isYoutube = Boolean(item.youtube_id);
+
       card.innerHTML = `
         <div class="card-media" data-index="${globalIndex}">
           <img src="${item.poster}" alt="${item.title}" class="card-poster" loading="lazy" />
@@ -275,10 +306,10 @@ class PortfolioApp {
           </video>
           
           <div class="card-badge-top-left">
-            <span class="pill-badge">${item.category_name}</span>
+            <span class="pill-badge ${item.badge_color || ''}">${item.category_name}</span>
           </div>
           <div class="card-badge-top-right">
-            <span class="pill-badge">${item.tech.resolution}</span>
+            <span class="pill-badge ${isYoutube ? 'pill-red' : ''}">${isYoutube ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:-1px;margin-right:4px;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>4K on YouTube' : item.tech.resolution}</span>
           </div>
           <div class="card-badge-bottom-right">
             <span class="pill-badge">${item.tech.duration}</span>
@@ -311,9 +342,19 @@ class PortfolioApp {
               </svg>
               View Artwork
             </button>
-            <button class="btn-preview-toggle" data-index="${globalIndex}">
-              Hover to preview
-            </button>
+            ${isYoutube ? `
+              <a href="${item.youtube_url}" target="_blank" rel="noopener noreferrer" class="btn-preview-toggle btn-card-youtube" onclick="event.stopPropagation()">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px;margin-right:4px;">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                YouTube 4K
+              </a>
+            ` : `
+              <button class="btn-preview-toggle" data-index="${globalIndex}">
+                Hover to preview
+              </button>
+            `}
+          </div>
           </div>
         </div>
       `;
@@ -502,15 +543,53 @@ class PortfolioApp {
     const item = this.items[index];
     if (!item) return;
 
-    // Load video according to current quality setting
-    const src = this.currentQuality === "4k" ? item.video_4k : item.video_1080p;
-    this.theaterVideo.src = src;
-    this.theaterVideo.poster = item.poster;
-    this.theaterVideo.loop = true;
-    this.theaterLoopBtn.style.color = "#ffffff";
-    
-    // Update Quality badge
-    this.updateQualityBadge();
+    const iframeWrapper = document.getElementById("theaterIframeWrapper");
+    const iframe = document.getElementById("theaterIframe");
+    const controls = document.getElementById("theaterControls");
+    const modalHeaderActions = document.getElementById("modalHeaderActions");
+
+    if (item.youtube_id) {
+      // YouTube Embed Mode: Fullscreen 4K YouTube player
+      this.theaterVideo.pause();
+      this.theaterVideo.style.display = "none";
+      if (controls) controls.style.display = "none";
+
+      if (iframeWrapper && iframe) {
+        iframeWrapper.style.display = "block";
+        iframe.src = `https://www.youtube-nocookie.com/embed/${item.youtube_id}?autoplay=1&rel=0&modestbranding=1`;
+      }
+
+      if (modalHeaderActions) {
+        modalHeaderActions.innerHTML = `
+          <a href="${item.youtube_url || ('https://www.youtube.com/watch?v=' + item.youtube_id)}" target="_blank" rel="noopener noreferrer" class="btn-youtube-external">
+            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            Watch 4K on YouTube
+          </a>
+        `;
+      }
+    } else {
+      // Standard HTML5 Video Mode
+      if (iframeWrapper && iframe) {
+        iframe.src = "";
+        iframeWrapper.style.display = "none";
+      }
+      this.theaterVideo.style.display = "block";
+      if (controls) controls.style.display = "flex";
+      if (modalHeaderActions) modalHeaderActions.innerHTML = "";
+
+      // Load video according to current quality setting
+      const src = this.currentQuality === "4k" ? item.video_4k : item.video_1080p;
+      this.theaterVideo.src = src;
+      this.theaterVideo.poster = item.poster;
+      this.theaterVideo.loop = true;
+      this.theaterLoopBtn.style.color = "#ffffff";
+      
+      // Update Quality badge
+      this.updateQualityBadge();
+
+      // Play video
+      this.theaterVideo.play().catch(() => {});
+    }
 
     // Populate metadata drawer
     document.getElementById("modalTitle").textContent = item.title;
@@ -526,9 +605,6 @@ class PortfolioApp {
     // Show modal
     this.theaterModal.classList.add("is-open");
     document.body.style.overflow = "hidden";
-
-    // Play video
-    this.theaterVideo.play().catch(() => {});
   }
 
   closeTheaterModal() {
@@ -536,6 +612,15 @@ class PortfolioApp {
     document.body.style.overflow = "";
     this.theaterVideo.pause();
     this.theaterVideo.src = "";
+
+    const iframeWrapper = document.getElementById("theaterIframeWrapper");
+    const iframe = document.getElementById("theaterIframe");
+    if (iframe) iframe.src = "";
+    if (iframeWrapper) iframeWrapper.style.display = "none";
+
+    this.theaterVideo.style.display = "block";
+    const controls = document.getElementById("theaterControls");
+    if (controls) controls.style.display = "flex";
   }
 
   navigateModal(direction) {
@@ -577,10 +662,11 @@ class PortfolioApp {
   }
 
   toggleStreamQuality() {
+    const item = this.items[this.currentModalIndex];
+    if (!item || item.youtube_id) return;
+
     const currentTime = this.theaterVideo.currentTime;
     const wasPlaying = !this.theaterVideo.paused;
-    const item = this.items[this.currentModalIndex];
-    if (!item) return;
 
     this.currentQuality = this.currentQuality === "1080p" ? "4k" : "1080p";
     this.updateQualityBadge();

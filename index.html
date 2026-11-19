@@ -116,12 +116,15 @@
       <div class="container">
         <div class="filter-tabs-wrapper">
           <div class="gallery-section-title">
-            Selected Works <span>(8 projects)</span>
+            Selected Works <span>(9 projects)</span>
           </div>
 
           <div class="filter-tabs">
             <button class="filter-btn active" data-filter="all">
-              All Works <span class="badge-count">8</span>
+              All Works <span class="badge-count">9</span>
+            </button>
+            <button class="filter-btn" data-filter="audio-reactive">
+              Audio Reactive <span class="badge-count">1</span>
             </button>
             <button class="filter-btn" data-filter="geometric-loops">
               Geometric Loops <span class="badge-count">2</span>
@@ -160,10 +163,10 @@
             <div class="about-tag">About Luigi Amari</div>
             <h2 class="about-title">General 3D Craft • Materials, Motion &amp; Environment</h2>
             <p class="about-text">
-              I am a multidisciplinary 3D artist and motion designer with broad generalist expertise across the computer graphics pipeline. Working in Blender Cycles with NVIDIA OptiX acceleration, my practice focuses on the interaction between tactile procedural shaders, hypnotic geometric loops, complex fluid simulations, and immersive technology backgrounds.
+              I am a multidisciplinary 3D artist and motion designer with broad generalist expertise across the computer graphics pipeline. Working in Blender with Cycles and EEVEE Next, my practice explores tactile procedural shaders, hypnotic geometric loops, complex fluid simulations, audio-reactive 3D visualizers, and immersive technology backgrounds.
             </p>
             <p class="about-text">
-              From the microscopic surface tension of liquid mercury chrome and organic gold filigree to dark sci-fi volumetric voids and turbulent ocean displacements, each project is developed with custom multi-node Bezier paths, physically accurate Fresnel falloffs, and zero-grain denoiser passes.
+              From the microscopic surface tension of liquid mercury chrome and organic gold filigree to music-synchronized FFT waveform displacements and turbulent ocean dynamics, each project is developed with custom multi-node Bezier paths, physically accurate Fresnel falloffs, and zero-grain denoiser passes.
             </p>
 
             <div class="about-credentials">
@@ -203,7 +206,7 @@
 
             <div class="spec-row">
               <span class="spec-row-label">Core Capabilities</span>
-              <span class="spec-row-val">Abstract Materials, Geometric Loops, Fluid Simulations, Tech Backgrounds</span>
+              <span class="spec-row-val">Abstract Materials, Geometric Loops, Fluid Simulations, Tech Backgrounds, Audio Reactive 3D</span>
             </div>
 
             <div class="spec-row">
@@ -281,9 +284,12 @@
       <!-- Video Viewport -->
       <div class="theater-viewport">
         <video class="theater-video" id="theaterVideo" playsinline preload="auto"></video>
+        <div class="theater-iframe-wrapper" id="theaterIframeWrapper" style="display: none;">
+          <iframe id="theaterIframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Luigi Amari 3D Video"></iframe>
+        </div>
 
         <!-- Custom Cinema Controls -->
-        <div class="theater-controls">
+        <div class="theater-controls" id="theaterControls">
           <!-- Scrubber Timeline -->
           <div class="timeline-bar" id="timelineBar">
             <div class="timeline-buffer" id="timelineBuffer"></div>
@@ -339,6 +345,7 @@
             <h2 id="modalTitle">Artwork Title</h2>
             <p class="modal-sub" id="modalSubtitle">Artwork Subtitle</p>
           </div>
+          <div class="modal-header-actions" id="modalHeaderActions"></div>
         </div>
 
         <p class="modal-description" id="modalDescription">
@@ -370,6 +377,10 @@
             <span class="spec-label">Lighting Architecture</span>
             <span class="spec-val" id="specLighting">Multi-Point Softbox Rig</span>
           </div>
+          <div class="tech-spec-item">
+            <span class="spec-label">Denoising &amp; Pipeline</span>
+            <span class="spec-val" id="specOptix">OptiX AI Denoising</span>
+          </div>
         </div>
       </div>
     </div>
@@ -383,7 +394,7 @@
           <img src="assets/logo.svg" alt="Luigi Amari 3D Artist" class="footer-logo-img" />
         </a>
       </div>
-      <p class="footer-tagline">3D Artist &amp; Motion Designer • Abstract Materials, Geometric Loops, Fluid Simulations &amp; Technology Backgrounds</p>
+      <p class="footer-tagline">3D Artist &amp; Motion Designer • Abstract Materials, Geometric Loops, Fluid Simulations, Tech Backgrounds &amp; Audio Reactive</p>
       <p class="footer-copy">
         &copy; 2026 Luigi Amari. All rights reserved. Handcrafted with Blender Cycles.
       </p>

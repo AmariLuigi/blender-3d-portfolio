@@ -1,9 +1,21 @@
-# Blender Auto-Saves and Backup Files
+# Raw heavy master video renders (>100MB) and test files
+assets/videos/Look_To_Him_BloodMoon_4K.mp4
+assets/videos/Stranger_*.mp4
+assets/videos/*_motion_*.mp4
+assets/videos/neon_synthwave_sunset_*.mp4
+*.blend
 *.blend1
 *.blend2
 *.blend@
 *.blend[0-9]
 *.autosave.blend
+*.mkv
+
+# Draft test assets
+jellyfish*
+*jellyfish*
+Cinematic_Car_Studio_Stage*
+bugatti.blend
 
 # Raw working video renders and heavy blend files in root
 /*_4K_*.mp4
@@ -14,19 +26,36 @@
 /Bugatti*.blend
 /*_Showcase_4K.blend
 /*_Showcase_4K.mp4
-/jellyfish_*.mp4
 
-# Draft test assets
-jellyfish*
-*jellyfish*
-Cinematic_Car_Studio_Stage*
-bugatti.blend
+# Test frames & scratch files in root and assets
+*.png
+*.jpg
+!assets/posters/*.jpg
+assets/posters/*.png
+assets/posters/test_*
+assets/posters/*_test_*
+assets/posters/foam_*
+assets/posters/phys_foam_*
+assets/posters/real_foam_*
+assets/posters/seq_foam_*
+assets/posters/particles_*
+assets/posters/spray_*
+assets/posters/eject_*
+assets/posters/ejection_*
+assets/posters/bloodmoon_*
+assets/posters/blood_moon_*
+assets/posters/psycho_*
+assets/posters/slasher_*
+assets/posters/stranger_*
+assets/posters/neon_synthwave_sunset.jpg
+assets/posters/look_to_him.jpg
 
 # Python / Environment Caches
 __pycache__/
 *.py[cod]
 *$py.class
-render_*.py
+*.py
+scratch/
 .vscode/
 .idea/
 *.log
