@@ -34,6 +34,38 @@ const PORTFOLIO_DATA = [
     highlights: ["Audio Reactive FFT Engine", "4K YouTube Master", "Dynamic Water Wave Physics", "Wireframe Grid Shifts"]
   },
   {
+    id: "bubbles_cinematic_stock",
+    title: "Macro Dynamics — Soap Bubble Physics",
+    subtitle: "Thin-Film Wave Optics & Fluid Mechanics",
+    category: "fluid-sim",
+    category_name: "Fluid Simulations",
+    badge_color: "pill-gold",
+    year: "2026",
+    role: "Fluid Dynamics, Wave Optics & Spatial Sound",
+    desc: "Scientific macro exploration of multi-body surface tension, thin-film wave optics, and real liquid-film mechanics. Features exterior daughter-bubble budding and pinch-off, capillary volume-conserving coalescence with damped oscillations, and Taylor-Culick film retraction into microscopic water pearls, backed by Minnaert resonance spatial audio.",
+    poster: "assets/posters/bubbles_cinematic_stock.jpg",
+    video_1080p: "assets/videos/bubbles_cinematic_stock_1080p.mp4",
+    video_4k: "assets/videos/bubbles_cinematic_stock_4k.mp4",
+    tech: {
+      artist: "Luigi Amari",
+      resolution: "4K UHD (3840×2160)",
+      fps: "24 FPS",
+      frames: "240 Frames",
+      duration: "10.0s",
+      engine: "Blender 5.3 (Cycles OptiX & Geometry Nodes)",
+      lighting: "Feathered elliptical softbox strips on dark slate cyclorama",
+      optix: "32-bit Compositor, AgX Filmic & Minnaert Spatial Audio",
+      color_space: "AgX Filmic (Anamorphic Dispersion)"
+    },
+    highlights: [
+      "Thin-Film Wave Optics",
+      "Exterior Budding & Pinch-off",
+      "Volume-Conserving Coalescence",
+      "Taylor-Culick Fragmentation",
+      "Minnaert Spatial Audio"
+    ]
+  },
+  {
     id: "art_nouveau_motion1",
     title: "Art Nouveau Kinetic Sphere — Motion I",
     subtitle: "The Golden Follow Glide",

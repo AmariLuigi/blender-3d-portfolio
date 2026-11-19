@@ -17,22 +17,23 @@
 | # | Artwork Title | Category | Resolution | Cadence | Duration | Focus Area |
 |---|---------------|----------|------------|---------|----------|------------|
 | 1 | **Look to Him** *(Audio Reactive Blood Moon)* | Audio Reactive | 4K UHD (3840×2160) | 30 FPS | 4m 45s (8,552 frames) | Procedural FFT Audio Reactivity • [Watch 4K on YouTube](https://www.youtube.com/watch?v=ZCQUX0lo0Ss) |
-| 2 | **Art Nouveau Kinetic Sphere — Motion I** *(The Golden Follow Glide)* | Geometric Loops | 4K UHD (3840×2160) | 30 FPS | 10.0s (300 frames) | Procedural Gold Filigree & Seamless Loop |
-| 3 | **Art Nouveau Kinetic Sphere — Motion II** *(180° Panoramic Orbit)* | Geometric Loops | 4K UHD (3840×2160) | 30 FPS | 10.0s (300 frames) | Multi-Angle Orbit Choreography |
-| 4 | **Liquid Chrome Morphing Sphere — Motion I** *(The Follow Glide)* | Abstract Materials & Fluid | 4K UHD (3840×2160) | 30 FPS | 10.0s (300 frames) | Mercury Surface Tension & Specular Strips |
-| 5 | **Liquid Chrome Morphing Sphere — Motion II** *(180° Orbital Sweep)* | Abstract Materials & Fluid | 4K UHD (3840×2160) | 30 FPS | 10.0s (300 frames) | Metallic Fluid Deformation & Cyclorama Rig |
-| 6 | **Cyberpunk Kinetic Core** *(Orbital Energy Simulation)* | Technology Backgrounds | 4K UHD (3840×2160) | 30 FPS | 9.9s (298 frames) | Volumetric Emission & Sci-Fi Void |
-| 7 | **Cyberpunk Core — Trailing Cam** *(Dynamic Chase & Zoom Out)* | Technology Backgrounds | 4K UHD (3840×2160) | 30 FPS | 10.0s (300 frames) | Progressive Focal Zoom & Cybernetic Grid |
-| 8 | **Ocean Surge Simulation** *(Procedural Wave Study)* | Fluid Simulations | 4K UHD (3840×2160) | 24 FPS | 4.5s (108 frames) | Subsurface Water Scattering & Micro-Foam |
-| 9 | **1970 Dodge Challenger R/T** *(Studio Lookdev)* | Studio & Lookdev | 4K UHD (3840×2160) | 30 FPS | 10.0s (300 frames) | Multi-Point Softbox Lighting & Clearcoat |
+| 2 | **Macro Dynamics — Soap Bubble Physics** *(Thin-Film Wave Optics)* | Fluid Simulations | 4K UHD (3840×2160) | 24 FPS | 10.0s (240 frames) | Multi-Body Surface Tension, Coalescence & Minnaert Spatial Audio |
+| 3 | **Art Nouveau Kinetic Sphere — Motion I** *(The Golden Follow Glide)* | Geometric Loops | 4K UHD (3840×2160) | 30 FPS | 10.0s (300 frames) | Procedural Gold Filigree & Seamless Loop |
+| 4 | **Art Nouveau Kinetic Sphere — Motion II** *(180° Panoramic Orbit)* | Geometric Loops | 4K UHD (3840×2160) | 30 FPS | 10.0s (300 frames) | Multi-Angle Orbit Choreography |
+| 5 | **Liquid Chrome Morphing Sphere — Motion I** *(The Follow Glide)* | Abstract Materials & Fluid | 4K UHD (3840×2160) | 30 FPS | 10.0s (300 frames) | Mercury Surface Tension & Specular Strips |
+| 6 | **Liquid Chrome Morphing Sphere — Motion II** *(180° Orbital Sweep)* | Abstract Materials & Fluid | 4K UHD (3840×2160) | 30 FPS | 10.0s (300 frames) | Metallic Fluid Deformation & Cyclorama Rig |
+| 7 | **Cyberpunk Kinetic Core** *(Orbital Energy Simulation)* | Technology Backgrounds | 4K UHD (3840×2160) | 30 FPS | 9.9s (298 frames) | Volumetric Emission & Sci-Fi Void |
+| 8 | **Cyberpunk Core — Trailing Cam** *(Dynamic Chase & Zoom Out)* | Technology Backgrounds | 4K UHD (3840×2160) | 30 FPS | 10.0s (300 frames) | Progressive Focal Zoom & Cybernetic Grid |
+| 9 | **Ocean Surge Simulation** *(Procedural Wave Study)* | Fluid Simulations | 4K UHD (3840×2160) | 24 FPS | 4.5s (108 frames) | Subsurface Water Scattering & Micro-Foam |
+| 10 | **1970 Dodge Challenger R/T** *(Studio Lookdev)* | Studio & Lookdev | 4K UHD (3840×2160) | 30 FPS | 10.0s (300 frames) | Multi-Point Softbox Lighting & Clearcoat |
 
 ---
 
 ## ✨ Core Pillars & Capabilities
 
 - **General 3D Knowledge**: Broad generalist capabilities across modeling, lookdev, lighting, procedural texturing, and simulation.
+- **Fluid Simulations**: Soap bubble thin-film wave optics, multi-body coalescence, Taylor-Culick droplet fragmentation, and ocean wave dynamics.
 - **Audio Reactive 3D**: Procedural FFT frequency analysis (Sub-bass, Snare, Highs) driving water displacement, emissive blooms, and particle motion.
 - **Abstract Materials**: Procedural gold, liquid mercury chrome, complex dielectric refractions, and caustics.
 - **Geometric Loops**: Seamless mathematical kinetic loops with multi-node Bezier camera paths.
-- **Fluid Simulations**: Viscous mercury physics, surface tension dynamics, and ocean wave displacements.
 - **Technology Backgrounds**: Volumetric atmospheric lighting, emission shaders, and sci-fi aesthetic environments.

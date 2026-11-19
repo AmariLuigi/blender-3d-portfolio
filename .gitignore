@@ -19,6 +19,7 @@ bugatti.blend
 
 # Raw working video renders and heavy blend files in root
 /*_4K_*.mp4
+/Bubbles_Cinematic_Stock_4K.mp4
 /Cinematic_Wave_*.mp4
 /Dodge_Challenger_*.mp4
 /Dodge_Challenger_*.blend
@@ -26,6 +27,12 @@ bugatti.blend
 /Bugatti*.blend
 /*_Showcase_4K.blend
 /*_Showcase_4K.mp4
+
+# Audio & Environment working files
+*.wav
+*.mp3
+*.hdr
+*.exr
 
 # Test frames & scratch files in root and assets
 *.png
